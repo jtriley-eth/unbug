@@ -74,7 +74,7 @@ contract MyContractTest is Test {
 
 ### [`Unbug`](src/Unbug.sol)
 
-#### `__memoryDump()`
+#### Memory Dump
 
 Halts execution and returns all of memory.
 
@@ -86,7 +86,7 @@ This overrides the return type specified by the function this is called in.
 function __memoryDump() internal pure;
 ```
 
-#### `__calldataDump()`
+#### Calldata Dump
 
 Halts execution and returns all of calldata.
 
@@ -98,7 +98,7 @@ This overrides the return type specified by the function this is called in.
 function __calldataDump() internal pure;
 ```
 
-#### `__storageDump(uint256,uint256)`
+#### Storage Dump
 
 Halts execution and returns a range of storage values.
 
@@ -117,7 +117,7 @@ function __storageDump(uint256 start, uint256 end)
 
 ### [`LibUnbug`](src/LibUnbug.sol)
 
-#### `memoryDump(address,bytes memory)`
+#### Memory Dump
 
 Calls an `Unbug` child contract that contains a `__memoryDump`.
 
@@ -132,7 +132,7 @@ Calls an `Unbug` child contract that contains a `__memoryDump`.
 function memoryDump(address target, bytes memory callData) internal returns (bytes memory)
 ```
 
-#### `calldataDump(address,bytes memory)`
+#### Calldata Dump
 
 Calls an `Unbug` child contract that contains a `__calldataDump`.
 
@@ -147,7 +147,7 @@ Calls an `Unbug` child contract that contains a `__calldataDump`.
 function calldataDump(address target, bytes memory callData) internal returns (bytes memory)
 ```
 
-#### `storaegDump(address,bytes memory)`
+#### Storage Dump
 
 Calls an `Unbug` child contract that contains a `__storageDump`.
 
